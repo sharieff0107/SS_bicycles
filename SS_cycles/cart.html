@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="./css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+    <link rel="stylesheet"
+        href="https://www.cssscript.com/demo/animated-customizable-range-slider-pure-javascript-rslider-js/css/rSlider.min.css">
+    <title>SS cycles | cart</title>
+</head>
+
+
+
+
+  <script>
+    const cartElement = document.getElementById('cart');
+  
+    function updatecart() {
+      const items = cart.getItems();
+      const total = cart.getTotal();
+  
+      const itemsHtml = items.map(item => `<li>${item.name} - $${item.price} x ${item.quantity}</li>`).join('');
+      const cartHtml = `
+        <h2>cart</h2>
+        <ul>
+          ${itemsHtml}
+        </ul>
+        <p>Total: $${total}</p>
+      `;
+  
+      cartElement.innerHTML = cartHtml;
+    }
+  
+    updatecart();
+  </script>
+    <header class="jumbotron">
+      <div class="container">
+          <div class="row row-header align-items-center">
+              <div class="col-12 col-sm-9">
+                  <h1 style="color: #6FDC6F;">SS cycles </h1>
+                  <p>We provide the best bicycles in the market, at prices affordable by any company, with a single
+                      goal. <em>"To revolutionize the way people move from
+                          and to their job".</em></p>
+              </div>
+              <div class="col-12 col-sm-3">
+                  <img src="images/logo.png" class="img-fluid">
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Rent</li>
+      </ol>
+  </nav>
+
+  <div class="container">
+      <!-- Price range import -->
+      <div class="container pt-5">
+          <input type="text" id="price_range" class="slider" />
+      </div>
+      <p id="results">20 bicycles were found.</p>
+      <div class="row row-content justify-content-center" id="products">
+          <div class="item col-12 col-md-3" alt-price="100" title="Bicycle #1">
+              <div class="product" id="1">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike3.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #1</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-34% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹153</span></span> ₹100</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="200" title="Bicycle #2">
+              <div class="product" id="2">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike5.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #2</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-21% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹255</span></span> ₹200</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="300" title="Bicycle #3">
+              <div class="product" id="3">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #3</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-15% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹354</span></span> ₹300</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="400" title="Bicycle #4">
+              <div class="product" id="4">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #4</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-11% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹454</span></span> ₹400</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="500" title="Bicycle #5">
+              <div class="product" id="5">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike1.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #5</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-9% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹551</span></span> ₹500</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="600" title="Bicycle #6">
+              <div class="product" id="6">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #6</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-8% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹654</span></span> ₹600</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="700" title="Bicycle #7">
+              <div class="product" id="7">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike2.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #7</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-6% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹752</span></span> ₹700</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="800" title="Bicycle #8">
+              <div class="product" id="8">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike1.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #8</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹851</span></span> ₹800</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="900" title="Bicycle #9">
+              <div class="product" id="9">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #9</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹954</span></span> ₹900</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1000" title="Bicycle #10">
+              <div class="product" id="10">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike5.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #10</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1055</span></span> ₹1000</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+
+          <div class="item col-12 col-md-3" alt-price="1100" title="Bicycle #11">
+              <div class="product" id="11">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike6.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #11</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-8% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1206</span></span> ₹1100</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1200" title="Bicycle #12">
+              <div class="product" id="12">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike5.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #12</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-8% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1305</span></span> ₹1200</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1300" title="Bicycle #13">
+              <div class="product" id="13">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #13</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-7% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1404</span></span> ₹1300</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1400" title="Bicycle #14">
+              <div class="product" id="14">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike3.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #14</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-6% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1503</span></span> ₹1400</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1500" title="Bicycle #15">
+              <div class="product" id="15">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike3.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #15</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-6% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1603</span></span> ₹1500</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1600" title="Bicycle #16">
+              <div class="product" id="16">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike1.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #16</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1701</span></span> ₹1600</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1700" title="Bicycle #17">
+              <div class="product" id="17">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #17</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1804</span></span> ₹1700</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1800" title="Bicycle #18">
+              <div class="product" id="18">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike2.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #18</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹1902</span></span> ₹1800</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="1900" title="Bicycle #19">
+              <div class="product" id="19">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike5.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #19</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹2005</span></span> ₹1900</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+          <div class="item col-12 col-md-3" alt-price="2000" title="Bicycle #20">
+              <div class="product" id="20">
+                  <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                      <div>
+                          <h4 class="text-center">Bicycle #20</h4>
+                      </div>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><span
+                          style="color:yellow;background-color:red;font-size:18px;">-4% OFF!</span></div>
+                  <div>
+                      <h5 class="text-center"><span
+                              style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                  style="color:red; font-size:20px">₹2104</span></span> ₹2000</h5>
+                      <p class="text-center">/Per Day</p>
+                  </div>
+                  <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                          cart</button></div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="cookies">
+      <span>We collect and use cookies to give you the best and most relevant website experience. Kindly accept the
+          cookies. <a data-toggle="modal" href="#privacy-policy">Privacy Policy</a></span>
+      <a href="#" class="accept btn btn-primary">Accept</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offset-sm-1 col-sm-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./rent.html">Rent</a></li>
+                    <li><a href="./buy.html">Buy</a></li>
+                    <li><a href="./aboutus.html">About us</a></li>
+                    <li><a href="./contactus.html">Contact us</a></li>
+                    <li><a href="./cart.html">cart</a></li>
+                    <li><a data-toggle="modal" href="#privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-5 col-sm-5">
+                <h5>Our Address</h5>
+                <address>
+                    <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                    <a href="https://maps.app.goo.gl/GiKoixsUFgUU9B6m6"> 2nd Cross Rd, Konappana Agrahara, Electronic City, Bengaluru, Karnataka 560100
+                    </a>
+                    <br>
+                    <i class="fa fa-phone fa-lg"></i> Tel.: <a href="tel:+91 7349010732">+91 7349010732</a><br>
+                    <i class="fa fa-fax fa-lg"></i> Fax: <a href="#">+91 7349010732</a><br>
+                    <i class="fa fa-envelope fa-lg"></i> Email: <a
+                        href="mailto:shariefy0007@gmail.com">shariefy0007@gmail.com</a>
+                </address>
+            </div>
+            <div class="col col-sm-4 align-self-center">
+                <div style="text-align:center">
+                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="
+                        target="_blank">
+                        <i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-instagram" href="http://www.instagram.com/" target="_blank">
+                        <i class="fa fa-instagram"></i></a>
+
+                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/" target="_blank">
+                        <i class="fa fa-linkedin"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/" target="_blank">
+                        <i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/" target="_blank">
+                        <i class="fa fa-youtube"></i></a>
+                    <a class="btn btn-social-icon" href="mailto:clients@sscycles.com">
+                        <i class="fa fa-envelope-o"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p> &copy; Copyright 2023 SS cycle </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p> Designed by <a href="https://github.com/sharieff0107" target="_blank">sharieff0107</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
